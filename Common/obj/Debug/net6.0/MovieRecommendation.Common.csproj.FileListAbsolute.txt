@@ -1,0 +1,12 @@
+C:\Users\berto\source\repos\MovieRecommendation\Common\bin\Debug\net6.0\MovieRecommendation.Common.deps.json
+C:\Users\berto\source\repos\MovieRecommendation\Common\bin\Debug\net6.0\MovieRecommendation.Common.dll
+C:\Users\berto\source\repos\MovieRecommendation\Common\bin\Debug\net6.0\MovieRecommendation.Common.pdb
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.csproj.AssemblyReference.cache
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.AssemblyInfoInputs.cache
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.AssemblyInfo.cs
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.csproj.CoreCompileInputs.cache
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.dll
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\refint\MovieRecommendation.Common.dll
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\MovieRecommendation.Common.pdb
+C:\Users\berto\source\repos\MovieRecommendation\Common\obj\Debug\net6.0\ref\MovieRecommendation.Common.dll

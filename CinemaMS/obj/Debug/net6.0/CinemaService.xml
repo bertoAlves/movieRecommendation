@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CinemaService</name>
+    </assembly>
+    <members>
+        <member name="M:MoviesService.Controllers.CinemaController.GetTheaters">
+            <summary>
+            List of Cinema based on selected criteria
+            </summary>
+            <returns>Cinemas</returns>
+        </member>
+        <member name="T:MoviesService.Models.Cinema">
+            <summary>
+            Cinema
+            </summary>
+        </member>
+    </members>
+</doc>

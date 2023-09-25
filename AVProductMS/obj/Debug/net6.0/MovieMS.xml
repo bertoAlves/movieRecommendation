@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MovieMS</name>
+    </assembly>
+    <members>
+        <member name="T:MovieMS.Controllers.DocumentaryController">
+            <summary>
+            Documentary Controller
+            </summary>
+        </member>
+        <member name="M:MovieMS.Controllers.DocumentaryController.#ctor(Microsoft.Extensions.Logging.ILogger{MovieMS.Controllers.DocumentaryController},MovieMS.Services.Interfaces.IDocumentaryService)">
+            <summary>
+            Documentary Controller
+            </summary>
+            <param name="logger"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:MovieMS.Controllers.DocumentaryController.GetAllTimeDocumentaries(System.String)">
+            <summary>
+            Get all-time documentaries based on search criteria.
+            </summary>
+            <param name="topics">Topics separated by commas.</param>
+            <returns>Returns a list of all-time documentaries.</returns>
+            <response code="200">Returns the list of all-time documentaries.</response>
+        </member>
+        <member name="T:MovieMS.Controllers.MovieController">
+            <summary>
+            Movie Controller
+            </summary>
+        </member>
+        <member name="M:MovieMS.Controllers.MovieController.#ctor(Microsoft.Extensions.Logging.ILogger{MovieMS.Controllers.MovieController},MovieMS.Services.Interfaces.IMovieService)">
+            <summary>
+            Movie Controller
+            </summary>
+            <param name="logger"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:MovieMS.Controllers.MovieController.GetAllTimeMovies(System.String,System.String)">
+            <summary>
+            Get all-time movies based on search criteria.
+            </summary>
+            <param name="keywords">Keywords separated by commas.</param>
+            <param name="genres">Genres ids separated by commas.</param>
+            <returns>Returns a list of all-time movies.</returns>
+            <response code="200">Returns the list of all-time movies.</response>
+        </member>
+        <member name="M:MovieMS.Controllers.MovieController.GetUpcomingMovies(System.String,System.String,System.Int32)">
+            <summary>
+            Get upcoming movies based on search criteria.
+            </summary>
+            <param name="keywords">Keywords separated by commas.</param>
+            <param name="genres">Genres ids separated by commas.</param>
+            <param name="daysFromNow">Number of days from now.</param>
+            <returns>Returns a list of upcoming movies.</returns>
+            <response code="200">Returns the list of upcoming movies.</response>
+        </member>
+        <member name="T:MovieMS.Controllers.TVShowController">
+            <summary>
+            TVShow Controller
+            </summary>
+        </member>
+        <member name="M:MovieMS.Controllers.TVShowController.#ctor(Microsoft.Extensions.Logging.ILogger{MovieMS.Controllers.TVShowController},MovieMS.Services.Interfaces.ITVShowService)">
+            <summary>
+            TVShow Controller
+            </summary>
+            <param name="logger"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:MovieMS.Controllers.TVShowController.GetAllTimeTVShows(System.String,System.String)">
+            <summary>
+            Get all-time TV shows based on search criteria.
+            </summary>
+            <param name="keywords">Keywords separated by commas.</param>
+            <param name="genres">Genres ids separated by commas.</param>
+            <returns>Returns a list of all-time TV Shows.</returns>
+            <response code="200">Returns the list of all-time TV Shows.</response>
+        </member>
+        <member name="T:MovieMS.DTO.ExtDBMovie">
+            <summary>
+            Movie Structure of tmdb api
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.Overview">
+            <summary>
+            Overview
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.GenresIDs">
+            <summary>
+            Genres IDs
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.OriginalLanguage">
+            <summary>
+            Original Language
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.ExtDBMovie.ReleaseDate">
+            <summary>
+            Release Date
+            </summary>
+        </member>
+        <member name="T:MovieMS.DTO.MovieDBResponse">
+            <summary>
+            Response of tmdb api
+            </summary>
+        </member>
+        <member name="P:MovieMS.DTO.MovieDBResponse.Page">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MovieMS.Services.DocumentaryService">
+            <summary>
+            Documentary Service
+            </summary>
+        </member>
+        <member name="M:MovieMS.Services.DocumentaryService.#ctor(System.Net.Http.IHttpClientFactory,MovieMS.Factories.Interfaces.IDocumentaryFactory,Microsoft.Extensions.Options.IOptions{MovieMS.Configuration.MovieDBApiOptions})">
+            <summary>
+            Documentary Service
+            </summary>
+            <param name="httpClient"></param>
+            <param name="factory"></param>
+        </member>
+        <member name="M:MovieMS.Services.DocumentaryService.GetAllTimeDocumentaries(System.String)">
+            <summary>
+            Get All Time Documentaries Based On Topics
+            </summary>
+            <returns>List of Documentaries</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:MovieMS.Services.MovieService">
+            <summary>
+            Movie Service
+            </summary>
+        </member>
+        <member name="M:MovieMS.Services.MovieService.#ctor(System.Net.Http.IHttpClientFactory,MovieMS.Factories.Interfaces.IMovieFactory,Microsoft.Extensions.Options.IOptions{MovieMS.Configuration.MovieDBApiOptions})">
+            <summary>
+            Movie Service
+            </summary>
+            <param name="httpClient"></param>
+            <param name="factory"></param>
+        </member>
+        <member name="M:MovieMS.Services.MovieService.GetAllTimeMovies(System.String,System.String)">
+            <summary>
+            Get All Time Movies Service Method
+            </summary>
+            <param name="keywords"></param>
+            <param name="genres"></param>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+        </member>
+        <member name="M:MovieMS.Services.MovieService.GetUpcomingMovies(System.String,System.String,System.DateTime)">
+            <summary>
+            Get Upcoming Movies Service Method
+            </summary>
+            <param name="keywords"></param>
+            <param name="genres"></param>
+            <param name="maxDate"></param>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+        </member>
+        <member name="T:MovieMS.Services.TVShowService">
+            <summary>
+            TVShow Service
+            </summary>
+        </member>
+        <member name="M:MovieMS.Services.TVShowService.#ctor(System.Net.Http.IHttpClientFactory,MovieMS.Factories.Interfaces.ITVShowFactory,Microsoft.Extensions.Options.IOptions{MovieMS.Configuration.MovieDBApiOptions})">
+            <summary>
+            TVShow Service
+            </summary>
+            <param name="httpClient"></param>
+            <param name="factory"></param>
+        </member>
+        <member name="M:MovieMS.Services.TVShowService.GetAllTimeTVShows(System.String,System.String)">
+            <summary>
+            Get All Time TVShows
+            </summary>
+            <param name="keywords"></param>
+            <param name="genres"></param>
+            <returns>List of TVShows</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+    </members>
+</doc>
